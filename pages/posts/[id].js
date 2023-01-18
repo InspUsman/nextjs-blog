@@ -4,7 +4,9 @@ import { getAllPostIds, getPostData } from "../../lib/posts";
 
 import utilStyles from "../../styles/utils.module.css";
 
-const Post = ({ postData }) => {
+const Post = ({ postData = null }) => {
+  if (!postData) return <div>Loading...</div>;
+
   return (
     <Layout>
       <Head>
