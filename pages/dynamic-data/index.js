@@ -4,7 +4,7 @@ const DynamicData = ({ data }) => {
   if (data) return <div>{data.id}</div>;
 };
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const response = await fetch("https://random-data-api.com/api/v2/users");
   const responseData = await response.json();
 
